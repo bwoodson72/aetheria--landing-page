@@ -45,14 +45,11 @@ export default function HeroSection() {
                     className="absolute inset-0 w-full h-full"
                 >
                     <Image
-                        src="/hero-bg.webp"
+                        src="/hero-bg.avif"
                         alt="Atmospheric Architecture"
                         fill
                         priority
-                        /* FIX: Added contrast and saturation filters.
-                           Reduced opacity slightly to let the underlying black background
-                           act as a natural "black point" for the image.
-                        */
+
                         className="object-cover opacity-80 scale-125 contrast-125 saturate-110 brightness-90"
                     />
                 </motion.div>
