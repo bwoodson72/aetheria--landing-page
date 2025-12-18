@@ -45,7 +45,7 @@ export default function VisionSection() {
 
                     {/* Left: The Visual Component (5 columns) */}
                     <div className="lg:col-span-5 relative">
-                        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
+                        <div className="relative aspect-4/5 overflow-hidden rounded-2xl border border-white/10">
                             <motion.div style={{ y: yImage, scale: 1.2 }} className="absolute inset-0">
                                 <Image
                                     src="/vision-hero.webp" // Deep forest/skyscraper blend
@@ -76,6 +76,7 @@ export default function VisionSection() {
                         viewport={{ once: true, margin: "-100px" }}
                     >
                         <motion.div variants={itemVariants} className="space-y-4">
+                            {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
                             <p className="text-emerald-400 font-mono text-xs tracking-[0.3em] uppercase italic">// Vision 2025</p>
                             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none uppercase">
                                 Engineering <br />
