@@ -3,7 +3,6 @@ import Nav from "@/components/nav";
 import HeroSection from "@/components/heroSection";
 import VisionSection from "@/components/visionSection";
 import ShowcaseGrid from "@/components/showcaseGrid";
-import CtaFooterSection from "@/components/ctaFooterSection";
 import StudioSection from "@/components/studioSection";
 import ContactSection from "@/components/contactSection";
 import Footer from "@/components/footerSection";
@@ -27,8 +26,6 @@ export default function Home() {
 
           {/*5. Studio Section*/}
         <StudioSection />
-        {/* 6. CTA Footer Section */}
-       <CtaFooterSection />
 
          {/*Contact Section */}
           <ContactSection/>
