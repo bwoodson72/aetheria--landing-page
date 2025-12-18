@@ -48,7 +48,7 @@ export default function VisionSection() {
                         <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
                             <motion.div style={{ y: yImage, scale: 1.2 }} className="absolute inset-0">
                                 <Image
-                                    src="/vision-hero.png" // Deep forest/skyscraper blend
+                                    src="/vision-hero.webp" // Deep forest/skyscraper blend
                                     alt="Sustainable Architecture Vision"
                                     fill
                                     className="object-cover brightness-70 contrast-125"

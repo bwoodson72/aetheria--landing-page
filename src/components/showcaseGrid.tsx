@@ -5,10 +5,10 @@ import { motion, Variants } from "motion/react";
 
 export default function ShowcaseGrid() {
     const projects = [
-        { id: "01", city: "LONDON", title: "The Verdant Spire", src: "/verdant-spire.png" },
-        { id: "02", city: "KYOTO", title: "Komorebi Pavilion", src: "/komorebi-pavilion.png" },
-        { id: "03", city: "REYKJAVIK", title: "Basalt Gardens", src: "/basalt-gardens.png" },
-        { id: "04", city: "SINGAPORE", title: "Solar Canopy", src: "/solar-canopy.png" },
+        { id: "01", city: "LONDON", title: "The Verdant Spire", src: "/verdant-spire.webp" },
+        { id: "02", city: "KYOTO", title: "Komorebi Pavilion", src: "/komorebi-pavilion.webp" },
+        { id: "03", city: "REYKJAVIK", title: "Basalt Gardens", src: "/basalt-gardens.webp" },
+        { id: "04", city: "SINGAPORE", title: "Solar Canopy", src: "/solar-canopy.webp" },
     ];
 
     const containerVariants: Variants = {
@@ -51,30 +51,31 @@ export default function ShowcaseGrid() {
                         <motion.div
                             key={project.id}
                             variants={cardVariants}
-                            /* REFACTORED HOVER:
-                               - No blur (or extremely subtle 1px if preferred)
-                               - Grayscale and Dim for inactive items
-                               - Full color and Scale for active item
+                            /* CLEANED HOVER LOGIC:
+                               Switched '!' to the prefix position (standard Tailwind)
+                               to ensure compiler compatibility.
                             */
                             className="relative cursor-pointer transition-all duration-500 ease-out
                                        group-hover/grid:opacity-30 group-hover/grid:grayscale group-hover/grid:brightness-75
-                                       hover:!opacity-100 hover:!grayscale-0 hover:!brightness-110 hover:scale-[1.01] z-0 hover:z-10"
+                                       hover:opacity-100! hover:grayscale-0! hover:brightness-110! hover:scale-[1.01] z-0 hover:z-10"
                         >
-                            <div className="aspect-[16/10] bg-zinc-900 rounded-2xl overflow-hidden relative border border-white/5 shadow-2xl">
+                            {/* FIX: Changed aspect-16/10 to aspect-[16/10] */}
+                            <div className="relative aspect-16/10 overflow-hidden rounded-2xl border border-white/5 bg-zinc-900 shadow-2xl">
                                 <Image
                                     src={project.src}
                                     alt={project.title}
                                     fill
                                     className="object-cover transition-transform duration-700 hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                 />
 
-                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
+                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
 
                                 <div className="absolute bottom-0 left-0 right-0 p-8">
-                                    <p className="text-[10px] font-mono text-emerald-400 mb-2 tracking-[0.2em]">
+                                    <p className="mb-2 font-mono text-[10px] tracking-[0.2em] text-emerald-400 uppercase">
                                         {project.id} / {project.city}
                                     </p>
-                                    <p className="text-2xl font-bold text-white tracking-tight leading-none uppercase">
+                                    <p className="text-2xl font-bold leading-none tracking-tight text-white uppercase">
                                         {project.title}
                                     </p>
                                 </div>

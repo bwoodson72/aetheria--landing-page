@@ -1,5 +1,7 @@
 'use client'
 
+import SmoothLink from "@/components/smoothLink";
+
 export default function Footer() {
     return (
         <footer className="relative bg-[#050505] pt-24 pb-12 px-6 overflow-hidden border-t border-white/5">
@@ -22,9 +24,9 @@ export default function Footer() {
                     <div className="space-y-6">
                         <p className="text-[10px] font-mono text-emerald-400 uppercase tracking-[0.2em]">Navigation</p>
                         <ul className="space-y-4 text-sm font-medium">
-                            <li><a href="#vision" className="text-white/60 hover:text-white transition-colors">Vision</a></li>
-                            <li><a href="#studio" className="text-white/60 hover:text-white transition-colors">Studio</a></li>
-                            <li><a href="#spaces" className="text-white/60 hover:text-white transition-colors">Projects</a></li>
+                            <li><SmoothLink href="#vision" className="text-white/60 hover:text-white transition-colors">Vision</SmoothLink></li>
+                            <li><SmoothLink href="#studio" className="text-white/60 hover:text-white transition-colors">Studio</SmoothLink></li>
+                            <li><SmoothLink href="#spaces" className="text-white/60 hover:text-white transition-colors">Projects</SmoothLink></li>
                         </ul>
                     </div>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SmoothScrollProvider from "@/components/smoothScrollProvider";
 
 import "./globals.css";
 
@@ -19,7 +20,9 @@ export default function RootLayout({
       <body
 
       >
+      <SmoothScrollProvider>
         {children}
+      </SmoothScrollProvider>
       </body>
     </html>
   );

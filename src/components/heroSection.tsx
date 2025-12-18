@@ -45,21 +45,24 @@ export default function HeroSection() {
                     className="absolute inset-0 w-full h-full"
                 >
                     <Image
-                        src="/hero-bg.png"
+                        src="/hero-bg.webp"
                         alt="Atmospheric Architecture"
                         fill
                         priority
-                        /* Increased opacity from 60 to 85 for a brighter image */
-                        className="object-cover opacity-85 scale-125"
+                        /* FIX: Added contrast and saturation filters.
+                           Reduced opacity slightly to let the underlying black background
+                           act as a natural "black point" for the image.
+                        */
+                        className="object-cover opacity-80 scale-125 contrast-125 saturate-110 brightness-90"
                     />
                 </motion.div>
 
-                {/* DYNAMIC OVERLAYS:
-                   1. Gradient shifted to 'via-transparent' to brighten the center focal point.
-                   2. Reduced solid black tint from 40% to 20% for better clarity.
+                {/* VIGNETTE OVERLAYS:
+                   Using a radial-style linear gradient to darken the edges and
+                   center the light on the text, removing the "gray" wash.
                 */}
-                <div className="absolute inset-0 bg-linear-to-b from-black/50 via-transparent to-[#0a0a0a]" />
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 bg-linear-to-b from-black/70 via-transparent to-[#0a0a0a]" />
+                <div className="absolute inset-0 bg-linear-to-r from-black/40 via-transparent to-black/40" />
             </div>
 
             {/* Content Container */}
@@ -86,7 +89,7 @@ export default function HeroSection() {
 
                 <motion.p
                     variants={itemVariants}
-                    className="max-w-xl text-lg md:text-xl text-white/80 leading-relaxed mb-10 drop-shadow-md"
+                    className="max-w-xl text-lg md:text-xl text-white/90 leading-relaxed mb-10 drop-shadow-xl"
                 >
                     Aetheria designs living environments that bridge the gap between organic nature and industrial precision. We build the lungs of the modern city.
                 </motion.p>
