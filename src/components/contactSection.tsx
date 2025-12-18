@@ -77,32 +77,38 @@ export default function ContactSection() {
                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                             <div className="flex flex-col gap-3">
-                                <label className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">Name</label>
+                                <label htmlFor="name" className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">Name</label>
                                 <input
                                     {...register("name")}
+                                    id="name"
                                     autoComplete="name"
+                                    aria-invalid={errors.name ? "true" : "false"}
+                                    aria-describedby={errors.name ? "name-error" : undefined}
                                     className={`bg-transparent border-b py-3 outline-none transition-all duration-300 ${
                                         errors.name ? 'border-red-500/50 focus:border-red-500' : 'border-white/10 focus:border-emerald-500'
                                     }`}
                                 />
                                 {errors.name && (
-                                    <span className="text-[10px] text-red-500/80 font-mono uppercase tracking-tight animate-in slide-in-from-top-1">
+                                    <span id="name-error" className="text-[10px] text-red-500/80 font-mono uppercase tracking-tight animate-in slide-in-from-top-1">
                                         {errors.name.message}
                                     </span>
                                 )}
                             </div>
 
                             <div className="flex flex-col gap-3">
-                                <label className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">Email</label>
+                                <label htmlFor="email" className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">Email</label>
                                 <input
                                     {...register("email")}
+                                    id="email"
                                     autoComplete="email"
+                                    aria-invalid={errors.email ? "true" : "false"}
+                                    aria-describedby={errors.email ? "email-error" : undefined}
                                     className={`bg-transparent border-b py-3 outline-none transition-all duration-300 ${
                                         errors.email ? 'border-red-500/50 focus:border-red-500' : 'border-white/10 focus:border-emerald-500'
                                     }`}
                                 />
                                 {errors.email && (
-                                    <span className="text-[10px] text-red-500/80 font-mono uppercase tracking-tight animate-in slide-in-from-top-1">
+                                    <span id="email-error" className="text-[10px] text-red-500/80 font-mono uppercase tracking-tight animate-in slide-in-from-top-1">
                                         {errors.email.message}
                                     </span>
                                 )}
@@ -110,16 +116,19 @@ export default function ContactSection() {
                         </div>
 
                         <div className="flex flex-col gap-3">
-                            <label className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">Project Details</label>
+                            <label htmlFor="message" className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">Project Details</label>
                             <textarea
                                 {...register("message")}
+                                id="message"
                                 rows={4}
+                                aria-invalid={errors.message ? "true" : "false"}
+                                aria-describedby={errors.message ? "message-error" : undefined}
                                 className={`bg-transparent border-b py-3 outline-none transition-all duration-300 resize-none ${
                                     errors.message ? 'border-red-500/50 focus:border-red-500' : 'border-white/10 focus:border-emerald-500'
                                 }`}
                             />
                             {errors.message && (
-                                <span className="text-[10px] text-red-500/80 font-mono uppercase tracking-tight animate-in slide-in-from-top-1">
+                                <span id="message-error" className="text-[10px] text-red-500/80 font-mono uppercase tracking-tight animate-in slide-in-from-top-1">
                                     {errors.message.message}
                                 </span>
                             )}

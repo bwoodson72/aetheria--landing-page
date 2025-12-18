@@ -52,12 +52,14 @@ export default function ShowcaseGrid() {
                             key={project.id}
                             variants={cardVariants}
                             className="relative cursor-pointer transition-all duration-500 ease-out group-hover/grid:opacity-30 group-hover/grid:grayscale group-hover/grid:brightness-75 hover:!opacity-100 hover:!grayscale-0 hover:!brightness-110 hover:scale-[1.01] z-0 hover:z-10"
+                            role="article"
+                            aria-labelledby={`project-title-${project.id}`}
                         >
                             {/* FIX: Changed aspect-16/10 to aspect-[16/10] */}
                             <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/5 bg-zinc-900 shadow-2xl">
                                 <Image
                                     src={project.src}
-                                    alt={project.title}
+                                    alt=""
                                     fill
                                     className="object-cover transition-transform duration-700 hover:scale-105"
                                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -69,7 +71,7 @@ export default function ShowcaseGrid() {
                                     <p className="mb-2 font-mono text-[10px] tracking-[0.2em] text-emerald-400 uppercase">
                                         {project.id} / {project.city}
                                     </p>
-                                    <p className="text-2xl font-bold leading-none tracking-tight text-white uppercase">
+                                    <p id={`project-title-${project.id}`} className="text-2xl font-bold leading-none tracking-tight text-white uppercase">
                                         {project.title}
                                     </p>
                                 </div>

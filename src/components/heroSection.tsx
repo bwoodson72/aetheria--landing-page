@@ -31,7 +31,7 @@ export default function HeroSection() {
     return (
         <section id="hero-section" className="relative h-screen flex flex-col justify-center px-6 overflow-hidden bg-black">
             {/* Background Image Container */}
-            <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
                 <motion.div
                     animate={{
                         x: [0, 20, 0, -20, 0],
@@ -46,7 +46,7 @@ export default function HeroSection() {
                 >
                     <Image
                         src="/hero-bg.webp"
-                        alt="Atmospheric Architecture"
+                        alt=""
                         fill
                         priority
                         quality={100}
@@ -115,6 +115,7 @@ export default function HeroSection() {
                 animate={{ opacity: 0.3 }}
                 transition={{ delay: 1.5, duration: 1 }}
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce"
+                aria-hidden="true"
             >
                 <div className="w-px h-12 bg-linear-to-b from-emerald-500 to-transparent" />
             </motion.div>

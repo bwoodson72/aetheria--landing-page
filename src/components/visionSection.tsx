@@ -44,12 +44,12 @@ export default function VisionSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
                     {/* Left: The Visual Component (5 columns) */}
-                    <div className="lg:col-span-5 relative">
+                    <div className="lg:col-span-5 relative" aria-hidden="true">
                         <div className="relative aspect-4/5 overflow-hidden rounded-2xl border border-white/10">
                             <motion.div style={{ y: yImage, scale: 1.2 }} className="absolute inset-0">
                                 <Image
                                     src="/vision-hero.webp" // Deep forest/skyscraper blend
-                                    alt="Sustainable Architecture Vision"
+                                    alt=""
                                     fill
                                     className="object-cover brightness-70 contrast-125"
                                 />

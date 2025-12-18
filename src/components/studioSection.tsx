@@ -54,15 +54,16 @@ export default function StudioSection() {
                         whileInView={{ width: "100%", opacity: 1 }}
                         transition={{ duration: 1.2, ease: "circOut", delay: 0.4 }}
                         className="h-px bg-white/10 mb-8"
+                        aria-hidden="true"
                     />
 
                     <motion.div variants={itemVariants} className="flex flex-wrap gap-8 font-mono text-[10px] md:text-xs text-emerald-400 tracking-widest">
                         <div className="flex items-center gap-2 group cursor-default">
-                            <span className="opacity-40 group-hover:opacity-100 transition-opacity">/</span>
+                            <span className="opacity-40 group-hover:opacity-100 transition-opacity" aria-hidden="true">/</span>
                             <span>14 GLOBAL AWARDS</span>
                         </div>
                         <div className="flex items-center gap-2 group cursor-default">
-                            <span className="opacity-40 group-hover:opacity-100 transition-opacity">/</span>
+                            <span className="opacity-40 group-hover:opacity-100 transition-opacity" aria-hidden="true">/</span>
                             <span>EST. 2018</span>
                         </div>
                     </motion.div>

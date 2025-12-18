@@ -22,22 +22,26 @@ export default function Footer() {
 
                     {/* Navigation Column */}
                     <div className="space-y-6">
-                        <p className="text-[10px] font-mono text-emerald-400 uppercase tracking-[0.2em]">Navigation</p>
-                        <ul className="space-y-4 text-sm font-medium">
-                            <li><SmoothLink href="#vision" className="text-white/60 hover:text-white transition-colors">Vision</SmoothLink></li>
-                            <li><SmoothLink href="#studio" className="text-white/60 hover:text-white transition-colors">Studio</SmoothLink></li>
-                            <li><SmoothLink href="#spaces" className="text-white/60 hover:text-white transition-colors">Projects</SmoothLink></li>
-                        </ul>
+                        <p id="footer-nav-label" className="text-[10px] font-mono text-emerald-400 uppercase tracking-[0.2em]">Navigation</p>
+                        <nav aria-labelledby="footer-nav-label">
+                            <ul className="space-y-4 text-sm font-medium">
+                                <li><SmoothLink href="#vision" className="text-white/60 hover:text-white transition-colors">Vision</SmoothLink></li>
+                                <li><SmoothLink href="#studio" className="text-white/60 hover:text-white transition-colors">Studio</SmoothLink></li>
+                                <li><SmoothLink href="#spaces" className="text-white/60 hover:text-white transition-colors">Projects</SmoothLink></li>
+                            </ul>
+                        </nav>
                     </div>
 
                     {/* Social Column */}
                     <div className="space-y-6">
-                        <p className="text-[10px] font-mono text-emerald-400 uppercase tracking-[0.2em]">Connect</p>
-                        <ul className="space-y-4 text-sm font-medium">
-                            <li><a href="#" className="text-white/60 hover:text-white transition-colors">Instagram</a></li>
-                            <li><a href="#" className="text-white/60 hover:text-white transition-colors">LinkedIn</a></li>
-                            <li><a href="#" className="text-white/60 hover:text-white transition-colors">Behance</a></li>
-                        </ul>
+                        <p id="footer-social-label" className="text-[10px] font-mono text-emerald-400 uppercase tracking-[0.2em]">Connect</p>
+                        <nav aria-labelledby="footer-social-label">
+                            <ul className="space-y-4 text-sm font-medium">
+                                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Instagram</a></li>
+                                <li><a href="#" className="text-white/60 hover:text-white transition-colors">LinkedIn</a></li>
+                                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Behance</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
 
@@ -50,6 +54,7 @@ export default function Footer() {
                     <button
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         className="group flex items-center gap-3 text-[10px] font-mono text-white/40 hover:text-emerald-400 transition-colors uppercase tracking-widest"
+                        aria-label="Scroll back to top"
                     >
                         Back to Top
                         <span className="w-5 h-5 rounded-full border border-white/10 flex items-center justify-center group-hover:border-emerald-400/30 transition-colors">
