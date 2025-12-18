@@ -35,7 +35,7 @@ export default function ShowcaseGrid() {
                     <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white uppercase italic font-serif">
                         Iconic <span className="text-emerald-400 not-italic font-sans">Projects.</span>
                     </h2>
-                    <p className="text-white/40 max-w-xs uppercase text-xs tracking-widest font-mono">
+                    <p className="text-white/70 max-w-xs uppercase text-sm tracking-widest font-mono">
                         [ Selected Works 2022—2025 ]
                     </p>
                 </div>
@@ -51,12 +51,13 @@ export default function ShowcaseGrid() {
                         <motion.div
                             key={project.id}
                             variants={cardVariants}
-                            className="relative cursor-pointer transition-all duration-500 ease-out group-hover/grid:opacity-30 group-hover/grid:grayscale group-hover/grid:brightness-75 hover:!opacity-100 hover:!grayscale-0 hover:!brightness-110 hover:scale-[1.01] z-0 hover:z-10"
-                            role="article"
+                            className="relative cursor-pointer transition-all duration-500 ease-out group-hover/grid:opacity-30 group-hover/grid:grayscale group-hover/grid:brightness-75 hover:!opacity-100 hover:!grayscale-0 hover:!brightness-110 hover:scale-[1.01] z-0 hover:z-10 focus-within:ring-2 focus-within:ring-emerald-500 rounded-2xl"
+                            role="link"
+                            tabIndex={0}
                             aria-labelledby={`project-title-${project.id}`}
                         >
                             {/* FIX: Changed aspect-16/10 to aspect-[16/10] */}
-                            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/5 bg-zinc-900 shadow-2xl">
+                            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-2xl">
                                 <Image
                                     src={project.src}
                                     alt=""
@@ -68,7 +69,7 @@ export default function ShowcaseGrid() {
                                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
 
                                 <div className="absolute bottom-0 left-0 right-0 p-8">
-                                    <p className="mb-2 font-mono text-[10px] tracking-[0.2em] text-emerald-400 uppercase">
+                                    <p className="mb-2 font-mono text-xs tracking-[0.2em] text-emerald-400 uppercase">
                                         {project.id} / {project.city}
                                     </p>
                                     <p id={`project-title-${project.id}`} className="text-2xl font-bold leading-none tracking-tight text-white uppercase">

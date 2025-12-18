@@ -60,9 +60,9 @@ export default function VisionSection() {
                         {/* Floating "Data" Badge - Parallax accent */}
                         <motion.div
                             style={{ y: yText }}
-                            className="absolute -right-8 bottom-12 p-6 bg-emerald-500/10 backdrop-blur-xl border border-emerald-500/20 rounded-xl hidden md:block"
+                            className="absolute -right-8 bottom-12 p-6 bg-emerald-500/20 backdrop-blur-xl border border-emerald-500/30 rounded-xl hidden md:block"
                         >
-                            <p className="text-emerald-400 font-mono text-[10px] tracking-widest uppercase mb-1">Status</p>
+                            <p className="text-emerald-400 font-mono text-xs tracking-widest uppercase mb-1">Status</p>
                             <p className="text-white font-bold text-xl uppercase tracking-tighter italic">Regenerative</p>
                         </motion.div>
                     </div>
@@ -77,8 +77,8 @@ export default function VisionSection() {
                     >
                         <motion.div variants={itemVariants} className="space-y-4">
                             {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-                            <p className="text-emerald-400 font-mono text-xs tracking-[0.3em] uppercase italic">// Vision 2025</p>
-                            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none uppercase">
+                            <p className="text-emerald-400 font-mono text-sm tracking-[0.3em] uppercase italic">// Vision 2025</p>
+                            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none uppercase text-white">
                                 Engineering <br />
                                 <span className="text-emerald-400">Symbiosis.</span>
                             </h2>
@@ -87,24 +87,24 @@ export default function VisionSection() {
                         {/* Your original 3 pillars, now with better spacing and motion */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                             <motion.div variants={itemVariants} className="space-y-3">
-                                <h3 className="text-xl font-bold uppercase tracking-tight">Carbon Negative</h3>
-                                <p className="text-white/40 leading-relaxed text-sm">
+                                <h3 className="text-xl font-bold uppercase tracking-tight text-white">Carbon Negative</h3>
+                                <p className="text-white/70 leading-relaxed text-sm">
                                     Every structure is engineered to absorb more CO2 than it produces,
                                     turning buildings into active carbon sinks.
                                 </p>
                             </motion.div>
 
                             <motion.div variants={itemVariants} className="space-y-3">
-                                <h3 className="text-xl font-bold uppercase tracking-tight">98% Biophilic</h3>
-                                <p className="text-white/40 leading-relaxed text-sm">
+                                <h3 className="text-xl font-bold uppercase tracking-tight text-white">98% Biophilic</h3>
+                                <p className="text-white/70 leading-relaxed text-sm">
                                     We move beyond decoration, integrating native flora into the
                                     very structural core of urban developments.
                                 </p>
                             </motion.div>
 
                             <motion.div variants={itemVariants} className="md:col-span-2 space-y-3 pt-6 border-t border-white/5">
-                                <h3 className="text-xl font-bold uppercase tracking-tight">Global Reach</h3>
-                                <p className="text-white/40 leading-relaxed text-sm max-w-md">
+                                <h3 className="text-xl font-bold uppercase tracking-tight text-white">Global Reach</h3>
+                                <p className="text-white/70 leading-relaxed text-sm max-w-md">
                                     From Tokyo to New York, our designs are transforming the
                                     skylines of the world&#39;s major capitals through organic precision.
                                 </p>

@@ -72,7 +72,7 @@ export default function HeroSection() {
             >
                 <motion.span
                     variants={itemVariants}
-                    className="inline-block px-3 py-1 border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-xs font-mono rounded-full mb-6 backdrop-blur-md"
+                    className="inline-block px-3 py-1 border border-emerald-500/50 bg-emerald-500/10 text-emerald-400 text-sm font-mono rounded-full mb-6 backdrop-blur-md"
                 >
                     EST. 2025 • ARCHITECTURAL INNOVATION
                 </motion.span>
@@ -82,12 +82,12 @@ export default function HeroSection() {
                     className="text-6xl md:text-[120px] leading-[0.85] font-bold tracking-tighter mb-8 uppercase"
                 >
                     BREATHING <br />
-                    <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-white to-white/40">STRUCTURES.</span>
+                    <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-white to-white/60">STRUCTURES.</span>
                 </motion.h1>
 
                 <motion.p
                     variants={itemVariants}
-                    className="max-w-xl text-lg md:text-xl text-white/90 leading-relaxed mb-10 drop-shadow-xl"
+                    className="max-w-xl text-lg md:text-xl text-white leading-relaxed mb-10 drop-shadow-xl"
                 >
                     Aetheria designs living environments that bridge the gap between organic nature and industrial precision. We build the lungs of the modern city.
                 </motion.p>
@@ -102,7 +102,7 @@ export default function HeroSection() {
 
                     <a
                         href="#contact"
-                        className="px-8 py-4 border border-white/20 bg-white/5 backdrop-blur-md rounded-lg hover:bg-white/10 hover:border-emerald-500/30 transition-all text-center"
+                        className="px-8 py-4 border border-white/40 bg-white/10 backdrop-blur-md rounded-lg hover:bg-white/20 hover:border-emerald-500/50 transition-all text-center text-white"
                     >
                         Start a Project
                     </a>

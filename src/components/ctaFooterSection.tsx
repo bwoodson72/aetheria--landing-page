@@ -11,12 +11,12 @@ export default function CtaFooterSection() {
                 Start a Project
             </button>
 
-            <footer className="mt-40 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white/30">
+            <footer className="mt-40 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white/60">
                 <p>© 2025 Aetheria Studio. All rights reserved.</p>
-                <div className="flex gap-8 uppercase tracking-widest text-[10px]">
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Twitter</a>
+                <div className="flex gap-4 uppercase tracking-widest text-xs">
+                    <a href="#" className="p-3 hover:text-emerald-400 transition-colors">Instagram</a>
+                    <a href="#" className="p-3 hover:text-emerald-400 transition-colors">LinkedIn</a>
+                    <a href="#" className="p-3 hover:text-emerald-400 transition-colors">Twitter</a>
                 </div>
             </footer>
         </section>
