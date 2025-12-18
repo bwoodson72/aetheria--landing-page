@@ -45,12 +45,13 @@ export default function HeroSection() {
                     className="absolute inset-0 w-full h-full"
                 >
                     <Image
-                        src="/hero-bg.avif"
+                        src="/hero-bg.webp"
                         alt="Atmospheric Architecture"
                         fill
                         priority
-
-                        className="object-cover opacity-80 scale-125 contrast-125 saturate-110 brightness-90"
+                        quality={100}
+                        sizes='100vw'
+                        className="object-cover opacity-90 scale-125 contrast-125 saturate-110 brightness-90"
                     />
                 </motion.div>
 
