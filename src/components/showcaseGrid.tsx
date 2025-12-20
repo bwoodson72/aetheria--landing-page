@@ -51,12 +51,15 @@ export default function ShowcaseGrid() {
                         <motion.div
                             key={project.id}
                             variants={cardVariants}
-                            className="relative cursor-pointer transition-all duration-500 ease-out group-hover/grid:opacity-30 group-hover/grid:grayscale group-hover/grid:brightness-75 hover:!opacity-100 hover:!grayscale-0 hover:!brightness-110 hover:scale-[1.01] z-0 hover:z-10 focus-within:ring-2 focus-within:ring-emerald-500 rounded-2xl"
+                            // 1. Desktop Float
+                            whileHover={{ scale: 1.02 }}
+                            // 2. Mobile Mechanical Press (The Tactile Fix)
+                            whileTap={{ scale: 0.96 }}
+                            className="relative cursor-pointer transition-all duration-500 ease-out group-hover/grid:opacity-30 group-hover/grid:grayscale group-hover/grid:brightness-75 hover:!opacity-100 hover:!grayscale-0 hover:!brightness-110 z-0 hover:z-10 focus-within:ring-2 focus-within:ring-emerald-500 rounded-2xl"
                             role="link"
                             tabIndex={0}
                             aria-labelledby={`project-title-${project.id}`}
                         >
-                            {/* FIX: Changed aspect-16/10 to aspect-[16/10] */}
                             <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-2xl">
                                 <Image
                                     src={project.src}
@@ -66,7 +69,7 @@ export default function ShowcaseGrid() {
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                 />
 
-                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
+                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
 
                                 <div className="absolute bottom-0 left-0 right-0 p-8">
                                     <p className="mb-2 font-mono text-xs tracking-[0.2em] text-emerald-400 uppercase">
