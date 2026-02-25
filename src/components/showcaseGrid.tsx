@@ -67,7 +67,7 @@ export default function ShowcaseGrid() {
                                     alt=""
                                     fill
                                     className="object-cover transition-transform duration-700 hover:scale-105"
-                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
                                 />
 
                                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
