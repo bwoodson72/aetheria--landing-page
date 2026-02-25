@@ -48,13 +48,13 @@ export default function VisionSection() {
                         <div className="relative aspect-4/5 overflow-hidden rounded-2xl border border-white/10">
                             <motion.div style={{ y: yImage, scale: 1.2 }} className="absolute inset-0">
                                 <Image
-                                    src="/vision-hero.webp" // Deep forest/skyscraper blend
+                                    src="/vision-hero.avif" // Deep forest/skyscraper blend
                                     alt=""
                                     fill
-                                    className="object-cover brightness-70 contrast-125"
+                                    className="object-cover  contrast-125"
                                 />
                             </motion.div>
-                            <div className="absolute inset-0 bg-linear-to-t from-[#050505] via-transparent to-transparent" />
+                            {/*<div className="absolute inset-0 bg-linear-to-t from-[#050505] via-transparent to-transparent" />*/}
                         </div>
 
                         {/* Floating "Data" Badge - Parallax accent */}

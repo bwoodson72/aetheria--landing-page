@@ -5,10 +5,11 @@ import { motion, Variants } from "motion/react";
 
 export default function ShowcaseGrid() {
     const projects = [
-        { id: "01", city: "LONDON", title: "The Verdant Spire", src: "/verdant-spire.webp" },
-        { id: "02", city: "KYOTO", title: "Komorebi Pavilion", src: "/komorebi-pavilion.webp" },
-        { id: "03", city: "REYKJAVIK", title: "Basalt Gardens", src: "/basalt-gardens.webp" },
-        { id: "04", city: "SINGAPORE", title: "Solar Canopy", src: "/solar-canopy.webp" },
+        { id: "01", city: "LONDON", title: "The Verdant Spire", src: "/verdant-spire.avif" },
+        { id: "02", city: "KYOTO", title: "Komorebi Pavilion", src: "/komorebi-pavilion.avif" },
+        { id: "03", city: "REYKJAVIK", title: "Basalt Gardens", src: "/basalt-gardens.avif" },
+        { id: "04", city: "SINGAPORE", title: "Solar Canopy", src: "/solar-canopy.avif" +
+                "" },
     ];
 
     const containerVariants: Variants = {

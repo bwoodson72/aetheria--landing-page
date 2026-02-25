@@ -72,7 +72,7 @@ export default function Nav() {
     return (
         <nav aria-label="Main Navigation" className="fixed top-0 w-full z-50">
 
-            <div className="absolute inset-0 bg-black/20 backdrop-blur-md border-b border-white/5 -z-10" />
+            <div className="absolute inset-0 bg-emerald-950/70 backdrop-blur-md border-b border-white/5 -z-10" />
 
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-50">
                 <div className="text-xl font-bold tracking-tighter uppercase relative z-50">
@@ -81,7 +81,7 @@ export default function Nav() {
                     </SmoothLink>
                 </div>
 
-                <div className="hidden md:flex gap-8 text-sm font-medium text-white/60">
+                <div className="hidden md:flex gap-8 text-lg font-medium text-white/60">
                     <SmoothLink href="#vision" className="hover:text-white transition-colors">Vision</SmoothLink>
                     <SmoothLink href="#spaces" className="hover:text-white transition-colors">Spaces</SmoothLink>
                     <SmoothLink href="#studio" className="hover:text-white transition-colors">Studio</SmoothLink>

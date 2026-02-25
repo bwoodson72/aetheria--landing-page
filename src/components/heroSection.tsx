@@ -45,13 +45,13 @@ export default function HeroSection() {
                     className="absolute inset-0 w-full h-full"
                 >
                     <Image
-                        src="/hero-bg.webp"
+                        src="/hero-bg.avif"
                         alt=""
                         fill
                         priority
                         quality={100}
                         sizes='100vw'
-                        className="object-cover opacity-90 scale-125 contrast-125 saturate-110 brightness-90"
+                        className="object-cover  scale-125  "
                     />
                 </motion.div>
 
@@ -59,8 +59,8 @@ export default function HeroSection() {
                    Using a radial-style linear gradient to darken the edges and
                    center the light on the text, removing the "gray" wash.
                 */}
-                <div className="absolute inset-0 bg-linear-to-b from-black/70 via-transparent to-[#0a0a0a]" />
-                <div className="absolute inset-0 bg-linear-to-r from-black/40 via-transparent to-black/40" />
+                {/*<div className="absolute inset-0 bg-linear-to-b from-black/70 via-transparent to-[#0a0a0a]" />*/}
+                {/*<div className="absolute inset-0 bg-linear-to-r from-black/40 via-transparent to-black/40" />*/}
             </div>
 
             {/* Content Container */}
@@ -72,22 +72,22 @@ export default function HeroSection() {
             >
                 <motion.span
                     variants={itemVariants}
-                    className="inline-block px-3 py-1 border border-emerald-500/50 bg-emerald-500/10 text-emerald-400 text-sm font-mono rounded-full mb-6 backdrop-blur-md"
+                    className="inline-block px-3 py-1 border border-emerald-500/70 bg-emerald-500/60 text-emerald-200 text-sm font-mono rounded-full mb-6 backdrop-blur-md"
                 >
                     EST. 2025 • ARCHITECTURAL INNOVATION
                 </motion.span>
 
                 <motion.h1
                     variants={itemVariants}
-                    className="text-6xl md:text-[120px] leading-[0.85] font-bold tracking-tighter mb-8 uppercase"
+                    className="text-6xl md:text-[120px] leading-[0.85] font-bold tracking-tighter mb-8 uppercase text-shadow-lg text-shadow-emerald-950 "
                 >
                     BREATHING <br />
-                    <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-white to-white/60">STRUCTURES.</span>
+                  STRUCTURES
                 </motion.h1>
 
                 <motion.p
                     variants={itemVariants}
-                    className="max-w-xl text-lg md:text-xl text-white leading-relaxed mb-10 drop-shadow-xl"
+                    className="max-w-xl text-lg md:text-xl text-white leading-relaxed mb-10   text-shadow-lg text-shadow-emerald-950"
                 >
                     Aetheria designs living environments that bridge the gap between organic nature and industrial precision. We build the lungs of the modern city.
                 </motion.p>
@@ -102,7 +102,7 @@ export default function HeroSection() {
 
                     <a
                         href="#contact"
-                        className="px-8 py-4 border border-white/40 bg-white/10 backdrop-blur-md rounded-lg hover:bg-white/20 hover:border-emerald-500/50 transition-all text-center text-white"
+                        className="px-8 py-4 border border-white/40 bg-white/10 backdrop-blur-md rounded-lg hover:bg-white/20 hover:border-emerald-500/50 transition-all text-center text-black font-bold"
                     >
                         Start a Project
                     </a>
