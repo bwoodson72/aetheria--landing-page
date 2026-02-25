@@ -79,7 +79,7 @@ export default function HeroSection() {
 
                 <motion.h1
                     variants={itemVariants}
-                    className="text-6xl md:text-[120px] leading-[0.85] font-bold tracking-tighter mb-8 uppercase text-shadow-lg text-shadow-emerald-950 "
+                    className="text-[clamp(2.5rem,10vw,120px)] leading-[0.85] font-bold tracking-tighter mb-8 uppercase text-shadow-lg text-shadow-emerald-950 "
                 >
                     BREATHING <br />
                   STRUCTURES
