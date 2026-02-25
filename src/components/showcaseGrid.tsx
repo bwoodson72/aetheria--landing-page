@@ -73,10 +73,10 @@ export default function ShowcaseGrid() {
                                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
 
                                 <div className="absolute bottom-0 left-0 right-0 p-8">
-                                    <p className="mb-2 font-mono text-xs tracking-[0.2em] text-emerald-400 uppercase">
+                                    <p className="mb-2 font-mono text-xs tracking-[0.2em] font-bold text-emerald-400 text-shadow-lg text-shadow-emerald-950 uppercase">
                                         {project.id} / {project.city}
                                     </p>
-                                    <p id={`project-title-${project.id}`} className="text-2xl font-bold leading-none tracking-tight text-white uppercase">
+                                    <p id={`project-title-${project.id}`} className="text-2xl font-bold leading-none tracking-tight text-shadow-lg text-shadow-emerald-950 text-white uppercase">
                                         {project.title}
                                     </p>
                                 </div>
