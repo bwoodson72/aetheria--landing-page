@@ -32,28 +32,17 @@ export default function HeroSection() {
         <section id="hero-section" className="relative h-screen flex flex-col justify-center px-6 overflow-hidden bg-black">
             {/* Background Image Container */}
             <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-                <motion.div
-                    animate={{
-                        x: [0, 20, 0, -20, 0],
-                        y: [-20, 0, 20, 0, -20],
-                    }}
-                    transition={{
-                        duration: 25,
-                        repeat: Infinity,
-                        ease: "linear"
-                    }}
-                    className="absolute inset-0 w-full h-full"
-                >
+                <div className="absolute inset-0 w-full h-full hero-pan">
                     <Image
                         src="/hero-bg.avif"
                         alt=""
                         fill
                         priority
-                        quality={85}
+                        quality={75}
                         sizes='100vw'
                         className="object-cover  scale-125  "
                     />
-                </motion.div>
+                </div>
 
                 {/* VIGNETTE OVERLAYS:
                    Using a radial-style linear gradient to darken the edges and
