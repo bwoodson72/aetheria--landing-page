@@ -51,7 +51,7 @@ export default function VisionSection() {
                                     src="/vision-hero.avif" // Deep forest/skyscraper blend
                                     alt=""
                                     fill
-                                    sizes="(max-width: 1024px) 100vw, 42vw"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 38vw"
                                     className="object-cover  contrast-125"
                                 />
                             </motion.div>
